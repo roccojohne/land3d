@@ -1,0 +1,5 @@
+screenx=800
+screeny=600
+fullscreen=0
+assetpath=data\assets\
+guifontname=data\fonts\gui.font
