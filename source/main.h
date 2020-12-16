@@ -10,6 +10,7 @@
 
 #include <gl/glew.h>
 #include <SFML/Window.hpp>
+#include <SFML/Graphics.hpp>
 #include <glm/glm.hpp>
 #include <spdlog/spdlog.h>
 
@@ -23,8 +24,8 @@
 class C_Setting;                                           // forward decl.
 class C_Game;
 class C_Window;
-class C_State;
-class C_State_Play;
-class C_State_Menu;
-class C_State_Setting;
+class C_States;
+class C_States_Play;
+class C_States_Menu;
+class C_States_Setting;
 class C_Shader;

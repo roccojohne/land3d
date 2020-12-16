@@ -14,7 +14,7 @@ C_Window::C_Window(C_Game &game)
     settings.Debug;
 
 
-    window = new sf::Window(sf::VideoMode(800, 600),  "Hello World", sf::Style::Default, settings);
+    window = new sf::RenderWindow(sf::VideoMode(800, 600),  "Hello World", sf::Style::Default, settings);
     if (!window)
     {
         spdlog::error("Can't create the mainwindow");
@@ -48,6 +48,11 @@ void C_Window::render(C_Game &game)
 
     int pos = 0;
     glBegin(GL_TRIANGLES);
-
-   glEnd();
+        glColor3f(.9f, .1f, .9f);
+        glVertex2f(.0f, -.5f);
+        glColor3f(.1f, .9f, .9f);
+        glVertex2f(-.5f, .5f);
+        glColor3f(.9f, .9f, .1f);
+        glVertex2f(.5f, .5f);
+    glEnd();
 };

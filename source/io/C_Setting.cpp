@@ -4,6 +4,9 @@ C_Setting::C_Setting()
 {
     spdlog::info("loading settings");
     Load();
+
+    font = new sf::Font;
+    font->loadFromFile(settingdata.guifontname);
 }
 
 C_Setting::~C_Setting()
@@ -31,8 +34,9 @@ bool C_Setting::Load()
         infile.close();
     }
     else
-        std::cout << "ERROR: can't open the settingfile from : " << std::filesystem::absolute(settingfile);
-   
+        {
+            spdlog::error("ERROR: can't open the settingfile from : " + std::filesystem::absolute(settingfile).string() + " using default values");
+        }
 
     return false;
 }
