@@ -7,11 +7,14 @@
 #include <string>
 #include <filesystem>
 #include <functional>
+#include <sstream>
+
 
 #include <gl/glew.h>
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
 #include <glm/glm.hpp>
+#include <GL/GLU.h>
 #include <spdlog/spdlog.h>
 
 #include "io/C_Setting.h"

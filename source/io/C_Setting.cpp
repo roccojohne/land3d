@@ -29,7 +29,9 @@ bool C_Setting::Load()
             right = line.substr(line.find_first_of('=') + 1);
             //std::cout << "Links " << left << "rechts " << right << std::endl;
             if (left == std::string("screenx"))
-                std::cout << "SCREENX\n";
+            {
+                //std::cout << "SCREENX\n";
+            }
         }
         infile.close();
     }

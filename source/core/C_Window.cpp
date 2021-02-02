@@ -46,13 +46,4 @@ C_Window::~C_Window()
 void C_Window::render(C_Game &game)
 {
 
-    int pos = 0;
-    glBegin(GL_TRIANGLES);
-        glColor3f(.9f, .1f, .9f);
-        glVertex2f(.0f, -.5f);
-        glColor3f(.1f, .9f, .9f);
-        glVertex2f(-.5f, .5f);
-        glColor3f(.9f, .9f, .1f);
-        glVertex2f(.5f, .5f);
-    glEnd();
 };

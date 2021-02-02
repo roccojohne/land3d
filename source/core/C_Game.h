@@ -21,6 +21,7 @@ class C_Game
         enum ID_STATE
         {
             ID_STATES_MENU = 1000,
+            ID_STATES_PLAY,
         };
 
        C_Game();

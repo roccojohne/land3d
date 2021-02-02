@@ -14,9 +14,11 @@ class C_States
 class C_States_Play : public C_States
 {
 public:
-    virtual void events(C_Game& game, sf::Event& event) = 0;
-    virtual void update(C_Game& game, double frametime) = 0;
-    virtual void render(C_Game& game) = 0;
+    C_States_Play(C_Game &game);
+    ~C_States_Play();
+    void events(C_Game& game, sf::Event& event);
+    void update(C_Game& game, double frametime);
+    void render(C_Game& game);
 };
 
 class C_States_Menu : public C_States                                   // the mainmenu
