@@ -16,7 +16,8 @@ C_Game::C_Game()
     setting = new C_Setting();
     mainwindow = new C_Window(*this);
     rendertimer = new sf::Clock;
-    changeCurrentState(ID_STATES_MENU);
+    //changeCurrentState(ID_STATES_MENU);
+    changeCurrentState(ID_STATES_PLAY);
 }
 
 C_Game::~C_Game()
@@ -44,10 +45,10 @@ bool C_Game::run()
 
         currentstate->update(*this, rendertimer->restart().asSeconds());
         
-        mainwindow->GetRenderWindow()->pushGLStates();
+        //mainwindow->GetRenderWindow()->pushGLStates();
             currentstate->render(*this);
-            mainwindow->render(*this);
-        mainwindow->GetRenderWindow()->popGLStates();
+       //     mainwindow->render(*this);
+        //mainwindow->GetRenderWindow()->popGLStates();
 
         mainwindow->GetRenderWindow()->display();
     }
@@ -69,7 +70,12 @@ void C_Game::changeCurrentState(const int state_id)
         break;
         case ID_STATES_PLAY:
         {
+//            glEnable(GL_DEBUG_OUTPUT);
             glEnable(GL_DEBUG_OUTPUT);
+            glEnable(GL_DEBUG_OUTPUT_SYNCHRONOUS);
+//            glDebugMessageCallback(debugMessage, NULL);
+
+            glDebugMessageControl(GL_DONT_CARE, GL_DONT_CARE, GL_DONT_CARE, 0, NULL, GL_TRUE);
             glDebugMessageCallback(MessageCallback, 0);
 
             spdlog::info("randerstate changes to playstate");

@@ -8,13 +8,13 @@ C_Window::C_Window(C_Game &game)
     sf::ContextSettings settings;
     settings.depthBits = 24;
     settings.stencilBits = 8;
-    settings.antialiasingLevel = 4;
-    settings.majorVersion = 3;
-    settings.minorVersion = 0;
-    settings.Debug;
+    settings.antialiasingLevel = 1;
+    settings.majorVersion = 4;
+    settings.minorVersion = 6;
+    settings.attributeFlags = sf::ContextSettings::Core; //settings.Core;
 
 
-    window = new sf::RenderWindow(sf::VideoMode(800, 600),  "Hello World", sf::Style::Default, settings);
+    window = new sf::/*Render*/Window(sf::VideoMode(800, 600),  "Hello World", sf::Style::Default, settings);
     if (!window)
     {
         spdlog::error("Can't create the mainwindow");

@@ -119,12 +119,14 @@
       <LanguageStandard>stdcpplatest</LanguageStandard>
       <EnableParallelCodeGeneration>true</EnableParallelCodeGeneration>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>glew32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>E:\papi\privat\Projekte\2019\vcpkg\vcpkg\installed\x64-windows\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -155,6 +157,7 @@
     <ClCompile Include="source\core\C_Window.cpp" />
     <ClCompile Include="source\io\C_Setting.cpp" />
     <ClCompile Include="source\main.cpp" />
+    <ClCompile Include="source\scene\C_Terrain.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\core\C_Game.h" />
@@ -163,11 +166,14 @@
     <ClInclude Include="source\core\C_Window.h" />
     <ClInclude Include="source\io\C_Setting.h" />
     <ClInclude Include="source\main.h" />
+    <ClInclude Include="source\scene\C_Entity.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="data\setting.dat">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </None>
+    <None Include="data\shaders\default_fs.glsl" />
+    <None Include="data\shaders\default_vs.glsl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

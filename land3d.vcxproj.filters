@@ -22,6 +22,12 @@
     <Filter Include="data">
       <UniqueIdentifier>{fcdde341-4ccb-4e5a-9dc8-c89d5c896146}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Headerdateien\scene">
+      <UniqueIdentifier>{778acfc1-7d46-49e7-a42d-96bf5f5dee1c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Quelldateien\scene">
+      <UniqueIdentifier>{b8f82d72-ca11-4ec3-94a5-ce229087fe85}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\main.cpp">
@@ -41,6 +47,9 @@
     </ClCompile>
     <ClCompile Include="source\core\C_States.cpp">
       <Filter>Quelldateien\core</Filter>
+    </ClCompile>
+    <ClCompile Include="source\scene\C_Terrain.cpp">
+      <Filter>Quelldateien\scene</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -62,10 +71,19 @@
     <ClInclude Include="source\core\C_States.h">
       <Filter>Headerdateien\core</Filter>
     </ClInclude>
+    <ClInclude Include="source\scene\C_Entity.h">
+      <Filter>Headerdateien\scene</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="data\setting.dat">
       <Filter>data</Filter>
+    </None>
+    <None Include="data\shaders\default_fs.glsl">
+      <Filter>Ressourcendateien</Filter>
+    </None>
+    <None Include="data\shaders\default_vs.glsl">
+      <Filter>Ressourcendateien</Filter>
     </None>
   </ItemGroup>
 </Project>

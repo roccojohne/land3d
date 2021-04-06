@@ -8,7 +8,7 @@
 #include <filesystem>
 #include <functional>
 #include <sstream>
-
+#include <cstddef>
 
 #include <gl/glew.h>
 #include <SFML/Window.hpp>
@@ -16,6 +16,9 @@
 #include <glm/glm.hpp>
 #include <GL/GLU.h>
 #include <spdlog/spdlog.h>
+
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
 
 #include "io/C_Setting.h"
 

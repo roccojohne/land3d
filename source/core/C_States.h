@@ -1,6 +1,7 @@
 #pragma once
 
 #include "../main.h"
+#include "../scene/C_Entity.h"
 
 class C_States
 {
@@ -11,8 +12,13 @@ class C_States
 };
 
 
+class C_Entity;
+class C_Terrain;
+
 class C_States_Play : public C_States
 {
+private:
+    C_Terrain *terrain = nullptr;
 public:
     C_States_Play(C_Game &game);
     ~C_States_Play();
