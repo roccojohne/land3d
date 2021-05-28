@@ -31,7 +31,7 @@ class C_Entity
 class C_Terrain : public C_Entity
 {
     private:
-        std::vector<Vertex> mesh;
+        std::vector<Vertex *>mesh;
         glm::vec2 hightmapsize = {0, 0};
     public:
         C_Terrain(C_Game& game);
